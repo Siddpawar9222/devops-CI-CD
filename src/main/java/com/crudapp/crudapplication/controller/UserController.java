@@ -15,6 +15,11 @@ public class UserController {
 
     private final UserService userService ;
 
+    @GetMapping("/test")
+    public String welcome(){
+      return "Hello World";
+    }
+
     @GetMapping("/welcome")
     public String welcome(){
       return "welcome.html";
