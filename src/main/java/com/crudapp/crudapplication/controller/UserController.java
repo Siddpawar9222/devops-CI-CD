@@ -16,7 +16,7 @@ public class UserController {
     private final UserService userService ;
 
     @GetMapping("/test")
-    public String welcome(){
+    public String testApp(){
       return "Hello World";
     }
 
