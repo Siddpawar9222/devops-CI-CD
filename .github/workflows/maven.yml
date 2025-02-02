@@ -31,7 +31,7 @@ jobs:
 
       - name: Execute Latest WAR file
         run: |
-          sudo kill -9 $(sudo lsof -t -i:8080) || true
+          sudo kill -9 $(sudo lsof -t -i:80) || true
           latest_war=$(ls -1t /home/ubuntu/actions-runner/_work/devops-CI-CD/devops-CI-CD/target/*.war | head -n 1)
           echo "Running WAR file: $latest_war"
           sudo java -jar "$latest_war" > log.txt 2>&1 &
